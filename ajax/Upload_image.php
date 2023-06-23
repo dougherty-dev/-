@@ -84,8 +84,8 @@ final class Upload_image {
 
 	private function save_image(?GdImage $image, string $filename): void {
 		$image !== NULL and match ($this->image_format) {
-			Image_format::WebP => imagewebp($image, $filename . Image_format::WebP->format()['ext'], $this->image_quality),
-			Image_format::AVIF => imageavif($image, $filename . Image_format::AVIF->format()['ext'], $this->image_quality),
+			Image_format::WebP => function_exists('imagewebp') and imagewebp($image, $filename . Image_format::WebP->format()['ext'], $this->image_quality),
+			Image_format::AVIF => function_exists('imageavif') and imageavif($image, $filename . Image_format::AVIF->format()['ext'], $this->image_quality),
 			Image_format::JPEG => imagejpeg($image, $filename . Image_format::JPEG->format()['ext'], $this->image_quality),
 		};
 	}
