@@ -13,7 +13,6 @@ final class Shashin_page {
 		$this->show_shashin();
 		$this->end_markup();
 	}
-//
 
 	private function show_folio(): string {
 		$this->get_page();
