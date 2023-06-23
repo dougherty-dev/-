@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 define('VERSION', '0.1.0');
-define('VERSION_DATE', '2023-06-23' . time());
+define('VERSION_DATE', '2023-06-23');
 define('AUTHOR', 'Niklas Dougherty');
 
 define('ERROR_REPORTING', FALSE);
