@@ -26,6 +26,8 @@ Sets and images can be managed by adding titles and descriptions, or changing or
 
 Customize header, footer, and other information. Override default layout with your own theme. Upload additional items, like PDF files or movies, and associate with an image. Create HTML pages for additional information.
 
+![shahsin](https://github.com/dougherty-dev/shashin/assets/71740645/a43361cd-ad63-40a0-940f-5ae3eb71fa07)
+
 ## Q & A
 
 ### What is this password file?
@@ -82,6 +84,6 @@ Photoshop has native export of WebP, but it is inferior to Google’s plugin Web
 
 Then save your edited 16 bit image as a flat TIFF, and open in Photoshop. Now you can choose export as AVIF from the interface. Photoshop export is limited to 10 bit per channel. On the other hand, you can define HDR output for monitors with higher bit depth. But unless you have such a monitor, you are operating in the dark.
 
-![shahsin](https://github.com/dougherty-dev/shashin/assets/71740645/a43361cd-ad63-40a0-940f-5ae3eb71fa07)
+![shashin-admin](https://github.com/dougherty-dev/shashin/assets/71740645/a548e1b2-3258-4d06-95a0-174ff5741d20)
 
 phpstan analyse -l9 -a /shashin/functions/constants.php /shashin: [OK]
