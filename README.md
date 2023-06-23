@@ -13,7 +13,7 @@ A minimalist, light-weight, and portable lookbook software for showcasing a pers
 
 ## Features
 
-No users, no config. Just upload the software and a password file to the root folder of your web server, and you are good to go. PHP must have write access to the root folder.
+No users, no config. Just upload the software and a password file to the **root folder** of your web server, and you are good to go. PHP must have **write access** to the root folder.
 
 Define your sets, then upload your images. Images will be rendered in AVIF, WebP or legacy JPEG format. Image sizes are fixed and defined for high resolution or large screens:
 
@@ -30,11 +30,11 @@ Customize header, footer, and other information. Override default layout with yo
 
 ### What is this password file?
 
-It is a text file named .htpassword.txt with the admin password given on the first line. Upload it to the Shashin software directory to complete the installation. If you forget your password, you can always upload a new password file. This is a simple and reasonably secure method without the need for e-mail.
+It is a text file named **.htpassword.txt** with the admin password given on the first line. Upload it to the Shashin software directory to complete the installation. If you forget your password, you can always upload a new password file. This is a simple and reasonably secure method without the need for e-mail.
 
 ### What image format should I use?
 
-AVIF is vastly superior, as it handles up to 12 bits per channel (48 bits with transparency) and has a much better compression algorithm. However, GD, Imagick, and most other server software reduce everything to 8 bits, for which WebP is a worthy contender. AVIF is typically not available on most PHP installations. AVIF in itself is also extremely processor intensive, and may not be feasible solution for your server.
+AVIF is **vastly** superior, as it handles up to 12 bits per channel (48 bits with transparency) and has a much better compression algorithm. However, GD, Imagick, and most other server software reduce everything to 8 bits, for which WebP is a worthy contender. AVIF is typically not available on most PHP installations. AVIF in itself is also extremely processor intensive, and may not be feasible solution for your server.
 
 A solution offered by this software is to manually replace images with hand-crafted versions with higher bit depth whenever needed. Typically, images with smooth gradients will benefit enormously from 12-bit AVIF, even though monitors are typically 8-bit.
 
