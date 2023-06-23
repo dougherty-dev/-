@@ -8,7 +8,7 @@ class Modify_admin {
 
 	public function __construct() {
 		$this->init();
-		match(TRUE) {
+		match (TRUE) {
 			isset($_POST['footer']) => $this->modify_footer(),
 			isset($_POST['delete_footer']) => $this->delete_footer(),
 			isset($_POST['delete_banner']) => $this->delete_banner(),
@@ -130,7 +130,7 @@ Sitemap: $site/sitemap.xml
 EOT;
 
 		file_put_contents(SITEMAP_FILE, $sitemap);
-		file_put_contents(ROBOTS_FILE, $robots);
+		file_exists(ROBOTS_FILE) or file_put_contents(ROBOTS_FILE, $robots);
 	}
 
 }
