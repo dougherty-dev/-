@@ -1,0 +1,416 @@
+@charset "utf-8";
+
+/*
+Theme name: Shashin
+*/
+
+body {
+	background: url(/img/flora-ul.webp) left top no-repeat fixed,
+		url(/img/flora-ll.webp) left bottom no-repeat fixed,
+		url(/img/flora-lr.webp) right bottom no-repeat fixed,
+		black;
+	background-size: 15vw, 20vw, 15vw;
+	color: lightgray;
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+
+input, textarea, select, optgroup {
+	background-color: black;
+	color: darkgray;
+	border: thin solid hsl(0, 0%, 10%);
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+
+textarea {
+	max-width: 50vw;
+	max-height: 10vh;
+	width: 40em;
+	height: 6em;
+}
+
+input[type="text"] {
+	max-width: 50vw;
+	width: 40em;
+}
+
+input#admin_login_password {
+	width: auto;
+	height: auto;
+	max-width: 80%;
+}
+
+textarea#edit-footer {
+	max-width: 70vw;
+	max-height: 10vh;
+	width: 50em;
+	height: 10em;
+}
+
+form {margin-top: 1em;}
+
+#edit-theme-area > textarea, #edit-page-area > textarea {
+	width: 60em;
+	height: 50em;
+	max-width: 90vw;
+	max-height: 90vh;
+}
+
+table {
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border-spacing: 0;
+	border: none;
+}
+
+th, td {
+	vertical-align: top;
+}
+
+button {
+	background-color: black;
+	color: #aaa;
+	border: none;
+	cursor: pointer;
+}
+
+fieldset {
+	border: none;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+	color: inherit;
+	text-decoration: none;
+}
+
+hr {
+	border: none;
+	border-top: thin solid #303030;
+}
+
+h2, h3, h4 {
+	text-decoration: underline;
+	color: gray;
+}
+
+::placeholder {
+	color: #303030;
+	font-style: italic;
+}
+
+.shashin-grid {
+	display: grid;
+	grid-template-areas:
+		'header header'
+		'sidebar folio'
+		'sidebar footer';
+	grid-template-columns: minmax(10em, 15vw) 1fr;
+	gap: 0.5em 0.5em;
+	opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+	.shashin-grid {
+		grid-template-areas:
+			'header'
+			'folio'
+			'sidebar'
+			'footer';
+		grid-template-columns: 1fr;
+	}
+}
+
+.grid-sidebar {
+	grid-area: sidebar;
+}
+
+.grid-sidebar > div {
+	margin: 0.5em;
+	padding: 0.5em;
+	font-size: 0.8em;
+	border: #411 solid thin;
+	border-radius: 0.7em;
+	background-color: #101010;
+}
+
+.grid-header {
+	grid-area: header;
+	display: block;
+	margin: 0.1em auto;
+	text-align: center;
+}
+
+.grid-folio {
+	grid-area: folio;
+	padding: 0.5em;
+}
+
+.grid-footer {
+	grid-area: footer;
+	border-top: thin solid #300;
+	width: 100%;
+	margin: 0.3em;
+	font-size: 0.8em;
+	opacity: 0.5;
+}
+
+.edit-grid-footer {
+	border-top: thin solid #300;
+	width: 100%;
+	margin: 0.3em;
+	font-size: 0.8em;
+	opacity: 0.5;
+}
+
+#folio {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 250px;
+	grid-auto-columns: 250px;
+	gap: 1em;
+}
+
+#folio > div.img {
+	position: relative;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#folio > div.img > img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: scale-down;
+	border-radius: 0.5em;
+}
+
+#folio > div.img > img:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.original {
+	position: fixed;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: thin solid red;
+	border-radius: 0.5em;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+}
+
+div#original > p.attachment-text {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	filter: drop-shadow(.03em .03em gray) drop-shadow(.06em .06em black);
+	opacity: 0.3;
+	font-size: 3em;
+}
+
+.image-text {
+	display: inline;
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	padding: 0.2em;
+	filter: drop-shadow(.03em .03em gray) drop-shadow(.06em .06em black);
+	opacity: 70%;
+	width: 95%;
+}
+
+#imageview {
+	position: relative;
+	text-align: center;
+}
+
+#imageview > img {
+	cursor: pointer;
+}
+
+.image-description, .image-title {
+	text-align: left;
+	color: gray;
+	margin: 0.5em 10%;
+	max-width: 30em;
+}
+
+.set-description, .set-title {
+	text-align: left;
+	color: gray;
+	margin: 0 20%;
+}
+
+.image-title, .set-title {
+	font-size: 1.3em;
+	font-style: italic;
+}
+
+.image-description, .set-description {
+	margin-bottom: 1em;
+}
+
+.thumb-left {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.thumb-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.up, .down, .link, .delete, .move-image, .replace-image,
+	.attach-media, .delete-attachment,
+	.edit-page, .edit-theme, .set-poster, #create_new_set {
+	cursor: pointer;
+}
+
+.horizontal {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+img.software {
+	max-height: 3em;
+	float: right;
+	margin: 0.3em;
+}
+
+img.logo {
+	max-height: 8vh;
+	max-width: 60vw;
+	margin: 1em;
+}
+
+img.fit {
+	max-height: 100%;
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+img.thumb {
+	max-height: 5em;
+	max-width: 5em;
+	width: auto;
+	height: auto;
+}
+
+img.medium, video.medium {
+	max-height: min(80vh, 1000px);
+	max-width: min(70vw, 1000px);
+	width: auto;
+	height: auto;
+}
+
+.sidebar_title {
+	font-size: 1.5em;
+	margin-top: 0.1em;
+}
+
+.edit-set > input, .edit-set > textarea {
+	border: thin solid #202020;
+	margin: 0.1em;
+}
+
+.new-set > input, .new-set > textarea {
+	border: thin solid #700;;
+	margin: 0.1em;
+}
+
+.center {
+	margin: 0.1em auto;
+	text-align: center;
+}
+
+.middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.dropzone {
+	border: thin solid #700;
+	background-color: hsl(0, 0%, 5%);
+	margin: 1em 0;
+	max-width: 60vw;
+}
+
+.dz-message {
+	margin: 0 !important;
+}
+
+.emoji {
+	font-size: 3em;
+	margin: 0;
+}
+
+.smaller {font-size: 0.8em;}
+.dimmed {opacity: 25%;}
+
+#current-images, #current-sets, #current-pages, #current-themes {
+	background-color: hsl(0, 0%, 5%);
+}
+
+.edit-images, .edit-themes, .edit-pages, .edit-sets {border: thin solid #700;}
+
+.edit-thumb {vertical-align: middle;}
+
+.poster {
+	border: yellow dashed thin;
+	padding: 0.2em;
+}
+
+.media-attachment, .image-replacement, .move-image-set-list,
+	.dialogue-replace, .dialogue-attach {
+	display: none
+}
+
+.drop-attach, .drop-replace, #drop-theme {
+	position: relative;
+	display: flex;
+	gap: 0.1em;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0.2em;
+	border-radius: 0.5em;
+	border: thin dashed #700;
+	margin: 0.2em 0;
+	cursor: pointer;
+}
+
+.drop-attach:hover, .drop-replace:hover, #drop-theme.hove {
+	border-color: darkgray;
+}
+
+.edit-modal {
+	position: fixed;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: thin solid red;
+	border-radius: 0.5em;
+	background-color: #000;
+	padding: 1em;
+}

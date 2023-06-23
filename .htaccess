@@ -1,0 +1,3 @@
+FallbackResource /index.php
+AddType image/avif .avif
+AddType image/webp .webp
