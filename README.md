@@ -34,11 +34,11 @@ It is a text file named **.htpassword.txt** with the admin password given on the
 
 ### What image format should I use?
 
-AVIF is **vastly** superior, as it handles up to 12 bits per channel (48 bits with transparency) and has a much better compression algorithm. However, GD, Imagick, and most other server software reduce everything to 8 bits, for which WebP is a worthy contender. AVIF is typically not available on most PHP installations. AVIF in itself is also extremely processor intensive, and may not be feasible solution for your server.
+AVIF is **vastly** superior, as it handles up to 12 bits per channel (48 bits with transparency) and has a much better compression algorithm. However, GD, Imagick, and most other server software reduce everything to 8 bits, for which WebP is a worthy contender. AVIF is typically not available on most PHP installations. AVIF in itself is also extremely processor intensive, and may not be a feasible solution for your server.
 
 A solution offered by this software is to manually replace images with hand-crafted versions with higher bit depth whenever needed. Typically, images with smooth gradients will benefit enormously from 12-bit AVIF, even though monitors are typically 8-bit.
 
-A 21 Mpx image will usually be reduced to a few hundred kilobytes or less in size without artefacts using 12-bit AVIF, whereas 8-bit WebP and JPEG will require considerably more data while still displaying banding or noise.
+A 21 Mpx image will usually be reduced to a few hundred kilobytes or less in size without artifacts using 12-bit AVIF, whereas 8-bit WebP and JPEG will require considerably more data while still displaying banding or noise.
 
 It also depends on your source. Phone cameras typically only use 10 bits per channel, while DSLR/M cameras store 14 bits per channel in RAW format. Editing in 16 bits, and then publishing to 12 bits AVIF, is therefore the ideal flow for serious photography.
 
@@ -78,9 +78,9 @@ Movies will play on the image page (medium), while PDFs will be shown as origina
 
 GIMP has native export for both formats. For AVIF, the standard quality setting 50% is a good starting point, together with 12 bit format. More bits doesn’t mean larger files – on the contrary, AVIF will benefit from smoother gradients.
 
-Photoshop has native export of WebP, but it is inferior to Google’s plugin WebPShop. Photoshop can also export AVIF, but it is a more complicated process. In Camera Raw tech preview preferences check «HDR output», and in file handling set «automatically open all supported TIFFs».
+Photoshop has native export of WebP, but it is inferior to Google’s plugin WebPShop. Photoshop can also export AVIF, but it is a more complicated process. In Camera Raw’s tech preview preferences, check «HDR output», and in file handling, set «automatically open all supported TIFFs».
 
-Then save your edited 16 bit image as flat TIFF, and open in Photoshop. Now you can choose export as AVIF form the interface. Photoshop export is limited to 10 bit per channel. On the other hand, you can define HDR output for monitors with higher bit depth. But unless you have such a monitor, you are operating in the dark.
+Then save your edited 16 bit image as a flat TIFF, and open in Photoshop. Now you can choose export as AVIF from the interface. Photoshop export is limited to 10 bit per channel. On the other hand, you can define HDR output for monitors with higher bit depth. But unless you have such a monitor, you are operating in the dark.
 
 ![shahsin](https://github.com/dougherty-dev/shashin/assets/71740645/a43361cd-ad63-40a0-940f-5ae3eb71fa07)
 
