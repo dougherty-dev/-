@@ -57,7 +57,7 @@ class Modify_text {
 
 		if ($this->attachment) {
 			$old_path = imagepath($this->dir, $this->id, $this->slug, 'a', $this->attachment, USERIMAGES);
-			$new_filepath = imagepath($this->dir, $this->id, $new_slug, 'a', $this->attachment, USERIMAGES);
+			$new_path = imagepath($this->dir, $this->id, $new_slug, 'a', $this->attachment, USERIMAGES);
 			is_real_file($old_path) and rename($old_path, $new_path);
 		}
 	}
