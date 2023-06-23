@@ -1,7 +1,7 @@
 # Shashin
 
-写真 (しゃしん, ja: shashin): «photograph»
-写真 (zh: xiězhēn): «portrait», «portray»
+写真 (しゃしん, ja: shashin): «photograph»<br />
+写真 (zh: xiězhēn): «portrait», «portray»<br />  
 
 A minimalist, light-weight, and portable lookbook software for showcasing a personal portfolio of large images using HDPI and modern image formats.
 
