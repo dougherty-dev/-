@@ -7,9 +7,9 @@ A minimalist, light-weight, and portable lookbook software for showcasing a pers
 
 ## Requirements
 
-PHP 8.1 (GD with AVIF support)
-Apache 2.4
-SQLite3
+* PHP 8.1 (GD with AVIF support)
+* Apache 2.4
+* SQLite3
 
 ## Features
 
@@ -17,10 +17,10 @@ No users, no config. Just upload the software and a password file to the root fo
 
 Define your sets, then upload your images. Images will be rendered in AVIF, WebP or legacy JPEG format. Image sizes are fixed and defined for high resolution or large screens:
 
-Original: 2000+ px max width or height
-Medium: 2000 px (image pages)
-Small: 1000 px (set pages)
-Thumb: 500 px (admin handling only)
+* Original: 2000+ px max width or height
+* Medium: 2000 px (image pages)
+* Small: 1000 px (set pages)
+* Thumb: 500 px (admin handling only)
 
 Sets and images can be managed by adding titles and descriptions, or changing order of appearance. Move images between sets. Define poster images for sets.
 
