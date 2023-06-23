@@ -13,7 +13,7 @@ A minimalist, light-weight, and portable lookbook software for showcasing a pers
 
 ## Features
 
-No users, no config. Just upload the software and a password file to the **root folder** of your web server, and you are good to go. PHP must have **write access** to the root folder.
+No users, no config. Just upload the software and a password file to the **root folder** of your web server, and you are good to go. PHP must have **write access** to the root folder, the database file, and the usr directory.
 
 Define your sets, then upload your images. Images will be rendered in AVIF, WebP or legacy JPEG format. Image sizes are fixed and defined for high resolution or large screens:
 
