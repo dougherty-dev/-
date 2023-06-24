@@ -18,11 +18,12 @@ final class Shashin_main {
 		$this->get_front_images();
 		$sets = '';
 		foreach ($this->proper_set_id as $order => $set_id) {
+			$lazy = ($order > 20) ? ' loading="lazy"' : '';
 			$setpath = findpath($set_id, $this->set_slug[$order], 's');
 			$title = reduced_string($this->set_title[$order]);
 			$sets .= <<< EOT
 					<div class="img" data-link="$setpath" title="$title">
-						<img src="{$this->image_filepath[$order]}">
+						<img$lazy src="{$this->image_filepath[$order]}">
 						<p class="image-text">$title ({$this->set_count[$order]})</p>
 					</div>
 

@@ -22,11 +22,12 @@ final class Shashin_set {
 		$this->reorder_images();
 		$images = '';
 		foreach ($this->image_id as $order => $image_id) {
+			$lazy = ($order > 20) ? ' loading="lazy"' : '';
 			$pagepath = findpath($image_id, $this->image_slug[$order]);
 			$description = reduced_string($this->image_title[$order]);
 			$images .= <<< EOT
 					<div class="img" data-link="$pagepath" title="{$this->image_title[$order]}">
-						<img src="{$this->image_filepath[$order]}">
+						<img$lazy src="{$this->image_filepath[$order]}">
 						<p class="image-text">$description</p>
 					</div>
 

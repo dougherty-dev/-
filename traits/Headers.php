@@ -10,6 +10,13 @@ trait Headers {
 		$theme = ($this->current_theme_slug !== '' && is_real_file(USERTHEMES . $theme_filename)) ?
 			USERTHEMES_HTML . $theme_filename . "?{$this->current_theme_time}" :
 			"/css/shashin.css?{$this->echo(VERSION_DATE)}";
+
+		$admin = '';
+		if ($this->is_admin()) $admin = <<< EOT
+	<link rel="stylesheet" type="text/css" href="/css/dropzone.css">
+
+EOT;
+
 		echo <<< EOT
 <!doctype html>
 <html lang="en-US">
@@ -18,8 +25,7 @@ trait Headers {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="token" content="{$_SESSION["token"]}">
 	<script src="/js/jquery-3.6.4.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/css/dropzone.css">
-	<link rel="stylesheet" type="text/css" href="$theme">
+$admin	<link rel="stylesheet" type="text/css" href="$theme">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
