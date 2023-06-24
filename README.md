@@ -26,7 +26,7 @@ Sets and images can be managed by adding titles and descriptions, or changing or
 
 Customize header, footer, and other information. Override default layout with your own theme. Upload additional items, like PDF files or movies, and associate with an image. Create HTML pages for additional information.
 
-[Live example](https://inposure.se/)
+[Live demonstration](https://inposure.se/)
 
 ![shahsin](https://github.com/dougherty-dev/shashin/assets/71740645/a43361cd-ad63-40a0-940f-5ae3eb71fa07)
 
