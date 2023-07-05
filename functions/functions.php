@@ -66,7 +66,7 @@ function imagepath(string $dir, int $id, string $slug, string $type, string $ext
 
 function findpath(int $id, string $slug, string $type = 'i'): string {
 	$path = HTML . "/$type/$id-$slug";
-	return constant('EXTENSION') ? "$path." . EXTENSION : $path;
+	return defined('EXTENSION') && constant('EXTENSION') !== '' ? "$path." . EXTENSION : $path;
 }
 
 function encode_text(string $text): string {

@@ -43,7 +43,7 @@ final Class Controller {
 		isset($pathinfo['dirname']) and $this->dirname = $pathinfo['dirname'];
 		isset($components[0]) and $this->id = (int) $components[0];
 		isset($components[1]) and $this->slug = $components[1];
-		if (constant('EXTENSION')) {
+		if (constant('EXTENSION') !== '') {
 			$parts = explode('.', $this->slug);
 			$this->slug = (isset($parts[1]) && $parts[1] === EXTENSION) ? $parts[0] : '';
 		}
